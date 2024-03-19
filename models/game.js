@@ -33,12 +33,15 @@ const abilitySchema = new Schema({
 const entitySchema = new Schema({
     name: {
         type: String,
+        required: true,
     },
     lastBalancedDate: {
         type: Date,
+        required: true,
     },
     entityDescription: {
         type: String,
+        default: '',
     },
     abilities: {
         type: [abilitySchema]

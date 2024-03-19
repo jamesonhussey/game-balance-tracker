@@ -20,48 +20,49 @@
     </section>
 
     <br><br>
-    <h2>Add Character or Item</h2>
-    <form id="add-review-form" method="POST" action="/games/<%= game._id %>/destinations">
-        <label>Destination Airport:
-            <select name="airport">
-                <option value="AUS">AUS</option>
-                <option value="DFW">DFW</option>
-                <option value="DEN">DEN</option>
-                <option value="LAX">LAX</option>
-                <option value="SAN">SAN</option>
-            </select>
-        </label><br>
-        <label>Land Date/Time:
-            <input type="datetime-local" name="arrival">
-        </label><br>
-        <button type="submit">Add Destination</button>
-    </form>
+    <h2>Characters and Items</h2>
 
     <% if (game.entities.length) { %>
         <table>
             <thead>
                 <tr>
-                    <th>Land Airport</th>
-                    <th>Land Date/Time</th>
+                    <th>Name: </th>
+                    <th>Description: </th>
+                    <th>Last Balanced Date: </th>
                 </tr>
             </thead>
             <tbody>
                 <% game.entities.forEach(function(e) { %>
                     <tr>
                         <td>
-                            <%= d.airport %>
+                            <%= e.name %>
                         </td>
                         <td>
-                            <%= d.arrival %>
+                            <%= e.entityDescription %>
+                        </td>
+                        <td>
+                            <%= e.lastBalancedDate %>
                         </td>
                     </tr>
                     <% }); %>
             </tbody>
         </table>
         <% } else { %>
-            <h5>No Destinations</h5>
+            <h5>No Characters or Items Added Yet</h5>
             <% } %>
-
-            <br><br>
+                <br><br>
+                <h3>Add New: </h3>
+                <form id="add-review-form" method="POST" action="/games/<%= game._id %>/entities">
+                    <label>Name:
+                        <input type="text" name="name">
+                    </label><br>
+                    <label>Last Balance Update:
+                        <input type="date" name="lastBalancedDate">
+                    </label><br>
+                    <label>Description: 
+                        <input type="text" name="entityDescription">
+                    </label><br>
+                    <button type="submit">Add to List</button>
+                </form>
 
                 <%- include('../partials/footer') %>
