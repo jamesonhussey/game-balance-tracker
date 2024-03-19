@@ -2,32 +2,32 @@
     <table>
         <thead>
             <tr>
-                <th>Airline</th>
-                <th>Airport</th>
-                <th>Flight Number</th>
-                <th>Departure Date/Time</th>
+                <th>Game Title</th>
+                <th>Game Genre</th>
+                <th>Last Patch Date</th>
+                <th>Total Entries</th>
             </tr>
         </thead>
         <tbody>
             <!-- Write the line of EJS to iterate over movies using forEach -->
 
             <!-- How does this know what I'm talking about as far as flights? Where do things in squids get their information from? -->
-            <% flights.forEach(function(f) { %>
+            <% games.forEach(function(g) { %>
             <tr>
                 <td>
-                    <%= f.airline %>
+                    <%= g.title %>
                 </td>
                 <td>
-                    <%= f.airport %>
+                    <%= g.gameType %>
                 </td>
                 <td>
-                    <%= f.flightNo %>
+                    <%= g.lastPatchDate %>
                 </td>
                 <td>
-                    <%= f.departs %>
+                    <%= g.totalEntries %>
                 </td>
                 <td>
-                    <a href="/flights/<%= f._id %>">DETAILS</a>
+                    <a href="/games/<%= g._id %>">DETAILS</a>
                 </td>
             </tr>
             <!-- Close the forEach using EJS here -->
