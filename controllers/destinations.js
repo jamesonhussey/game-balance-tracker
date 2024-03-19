@@ -1,16 +1,16 @@
-const Flight = require('../models/flight')
+const Game = require('../models/game')
 
 module.exports = {
     create
 }
 
 async function create(req, res) {
-    const flight = await Flight.findById(req.params.id)
-    flight.destinations.push(req.body)
+    const game = await Game.findById(req.params.id)
+    game.entities.push(req.body)
     try {
-        await flight.save()
+        await game.save()
     } catch(err) {
         console.log(err)
     }
-    res.redirect(`/flights/${flight._id}`)
+    res.redirect(`/games/${game._id}`)
 }

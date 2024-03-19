@@ -51,9 +51,11 @@ const entitySchema = new Schema({
 const gameSchema = new Schema({
     title: {
         type: String,
+        required: true,
     },
     totalEntries: {
         type: Number,
+        default: 0,
     },
     gameType: {
         type: String,
@@ -61,6 +63,7 @@ const gameSchema = new Schema({
     },
     lastPatchDate: {
         type: Date,
+        required: true,
     },
     entities: {
         type: [entitySchema],

@@ -15,13 +15,13 @@
         </div>
         <div>Last Patch Date: </div>
         <div>
-            <%= game.lastPatchDate %>
+            <%= game.lastPatchDate.toLocaleDateString() %>
         </div>
     </section>
 
     <br><br>
-    <h2>Add Destination</h2>
-    <form id="add-review-form" method="POST" action="/flights/<%= flight._id %>/destinations">
+    <h2>Add Character or Item</h2>
+    <form id="add-review-form" method="POST" action="/games/<%= game._id %>/destinations">
         <label>Destination Airport:
             <select name="airport">
                 <option value="AUS">AUS</option>
@@ -37,7 +37,7 @@
         <button type="submit">Add Destination</button>
     </form>
 
-    <% if (flight.destinations.length) { %>
+    <% if (game.entities.length) { %>
         <table>
             <thead>
                 <tr>
@@ -46,7 +46,7 @@
                 </tr>
             </thead>
             <tbody>
-                <% flight.destinations.forEach(function(d) { %>
+                <% game.entities.forEach(function(e) { %>
                     <tr>
                         <td>
                             <%= d.airport %>
@@ -63,43 +63,5 @@
             <% } %>
 
             <br><br>
-            <h2>Add Ticket</h2>
-
-            <form id="add-ticket-form" action="/tickets/<%= flight.id %>" method="POST">
-                <label>Seat:</label>
-                <input name="seat" required pattern="[A-F][1-9]\d?">
-              
-                <label>Price:</label>
-                <input name="price">
-                
-                <input type="submit" value="Add Ticket">
-              </form>
-
-              <br><br>
-
-              <% if (ticket.length) { %>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Seat Code</th>
-                            <th>Ticket Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% ticket.forEach(function(t) { %>
-                            <tr>
-                                <td>
-                                    <%= t.seat %>
-                                </td>
-                                <td>
-                                    <%= '$' + t.price %>
-                                </td>
-                            </tr>
-                            <% }); %>
-                    </tbody>
-                </table>
-                <% } else { %>
-                    <h5>No Tickets</h5>
-                    <% } %>
 
                 <%- include('../partials/footer') %>

@@ -13,17 +13,17 @@ function newGame(req, res) {
 }
 
 async function index(rew, res) {
-    const flights = await Flight.find({})
+    const games = await Game.find({})
     res.render('games/index', { title: "All Games", games })
 }
 
 async function create(req, res) {
     try {
-        await Flight.create(req.body)
+        await Game.create(req.body)
         res.redirect('games')
     } catch(err) {
         console.log(err)
-        res.render('games/new', {errorMsg: err.message})
+        res.render('games/new', {title: err, errorMsg: err.message})
     }
 }
 

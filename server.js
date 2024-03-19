@@ -9,8 +9,8 @@ require('./config/database')
 
 var indexRouter = require('./routes/index');
 var gamesRouter = require('./routes/games');
-var destinationsRouter = require('./routes/destinations')
-var ticketsRouter = require('./routes/tickets')
+// var destinationsRouter = require('./routes/destinations')
+// var ticketsRouter = require('./routes/tickets')
 
 var app = express();
 
@@ -26,8 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/games', gamesRouter);
-app.use('/', destinationsRouter)
-app.use('/', ticketsRouter)
+// app.use('/', destinationsRouter)
+// app.use('/', ticketsRouter)
 
 
 // catch 404 and forward to error handler
