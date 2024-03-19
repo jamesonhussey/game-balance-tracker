@@ -1,0 +1,110 @@
+    passiveName: {
+        type: String,
+    },
+    passiveDescription: {
+        type: String,
+    },
+
+    m1AbilityName: {
+        type: String,
+    },
+    m1AbilityDescription: {
+        type: String,
+    },
+    m1AbilityType: {
+        type: String,
+    },
+    m1AbilityDamage: {
+        type: Number,
+    },
+    m1AbilityHealing: {
+        type: Number,
+    },
+    m1AbilityNotes: {
+        type: String,
+    },
+
+
+    m2AbilityName: {
+        type: String,
+    },
+    m2AbilityDescription: {
+        type: String,
+    },
+    m2AbilityType: {
+        type: String,
+    },
+    m2AbilityDamage: {
+        type: Number,
+    },
+    m2AbilityHealing: {
+        type: Number,
+    },
+    m2AbilityNotes: {
+        type: String,
+    },
+
+
+    shiftAbilityName: {
+        type: String,
+    },
+    shiftAbilityDescription: {
+        type: String,
+    },
+    shiftAbilityType: {
+        type: String,
+    },
+    shiftAbilityDamage: {
+        type: Number,
+    },
+    shiftAbilityHealing: {
+        type: Number,
+    },
+    shiftAbilityNotes: {
+        type: String,
+    },
+
+
+    eAbilityName: {
+        type: String,
+    },
+    eAbilityDescription: {
+        type: String,
+    },
+    eAbilityType: {
+        type: String,
+    },
+    eAbilityDamage: {
+        type: Number,
+    },
+    eAbilityHealing: {
+        type: Number,
+    },
+    eAbilityNotes: {
+        type: String,
+    },
+
+    
+    ultAbilityName: {
+        type: String,
+    },
+    ultAbilityDescription: {
+        type: String,
+    },
+    ultAbilityType: {
+        type: String,
+    },
+    ultAbilityDamage: {
+        type: Number,
+    },
+    ultAbilityHealing: {
+        type: Number,
+    },
+    ultAbilityNotes: {
+        type: String,
+    },
+
+
+    miscNotes: {
+        type: String,
+    },
