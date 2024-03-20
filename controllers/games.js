@@ -12,12 +12,12 @@ module.exports = {
 }
 
 function newGame(req, res) {
-    res.render('games/new', {title: 'Add Game', errorMsg: ''})
+    res.render('games/new', {title: 'add game', errorMsg: ''})
 }
 
 async function index(req, res) {
     const games = await Game.find({})
-    res.render('games/index', { title: "All Games", games })
+    res.render('games/index', { title: "all games", games })
 }
 
 async function create(req, res) {
@@ -34,12 +34,9 @@ async function show(req, res) {
     console.log(req.params.id)
     const game = await Game.findById(req.params.id)
     console.log(game)
-    // const ticket = await Ticket.find({'flight':req.params.id})
-    // console.log(ticket)
     res.render('games/show', {
-        title: 'Game Details',
+        title: 'game details',
         game,
-        // ticket,
     })
 }
 
@@ -57,7 +54,7 @@ async function update(req, res) {
 async function edit(req, res) {
     const info = await Game.findById(req.params.id)
     try {
-        res.render('games/update', {title: 'Update', errorMsg: '', info})
+        res.render('games/update', {title: 'update', errorMsg: '', info})
     } catch {
 
     }
