@@ -28,7 +28,9 @@ async function create(req, res) {
 }
 
 async function show(req, res) {
+    console.log(req.params.id)
     const game = await Game.findById(req.params.id)
+    console.log(game)
     // const ticket = await Ticket.find({'flight':req.params.id})
     // console.log(ticket)
     res.render('games/show', {

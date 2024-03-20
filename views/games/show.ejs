@@ -41,7 +41,10 @@
                             <%= e.entityDescription %>
                         </td>
                         <td>
-                            <%= e.lastBalancedDate %>
+                            <%= e.lastBalancedDate.toLocaleDateString() %>
+                        </td>
+                        <td>
+                            <a href="/entities/<%= e._id %>">DETAILS</a>
                         </td>
                     </tr>
                     <% }); %>
