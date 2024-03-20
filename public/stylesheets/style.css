@@ -157,3 +157,7 @@ table td {
 #delete-button {
   background-color: #424748;
 }
+
+#navigation-bar {
+  justify-content: start;
+}
