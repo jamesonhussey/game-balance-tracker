@@ -1,7 +1,31 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica;
-  color: #424748;
+  font-family: "Anonymous Pro";
+  color: #ffffff;
+}
+
+.anonymous-pro-regular {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.anonymous-pro-bold {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.anonymous-pro-regular-italic {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.anonymous-pro-bold-italic {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-style: italic;
 }
 
 body {
@@ -16,7 +40,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: #00303b;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -33,8 +57,8 @@ body > main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #E8ECEB;
+  align-items:start;
+  background-color: #252525;
   padding: 20px;
   overflow-y: scroll;
 }
@@ -128,4 +152,8 @@ table td {
   width: 8rem;
   grid-column: 2 / 3;
   margin-bottom: 2rem;
+}
+
+#delete-button {
+  background-color: #424748;
 }
