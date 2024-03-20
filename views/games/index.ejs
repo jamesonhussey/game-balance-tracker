@@ -29,6 +29,14 @@
                 <td>
                     <a href="/games/<%= g._id %>">DETAILS</a>
                 </td>
+                <td>
+                    <form action="/games/<%= g._id %>?_method=DELETE" method="POST">
+                        <button type="submit">X</button>
+                    </form>
+                </td>
+                <td>
+                    <a href="/games/update/<%= g._id %>">U</a>
+                </td>
             </tr>
             <!-- Close the forEach using EJS here -->
             <% }) %>

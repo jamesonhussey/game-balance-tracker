@@ -15,3 +15,12 @@ router.get('/', gamesCtrl.index)
 
 //GET /games/:id
 router.get('/:id', gamesCtrl.show)
+
+//DELETE /games/:id
+router.delete('/:id', gamesCtrl.delete)
+
+//PUT /games/:id
+router.put('/:id', gamesCtrl.update)
+
+//GET /games/update
+router.get('/update/:id', gamesCtrl.edit)

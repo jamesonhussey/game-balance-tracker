@@ -5,14 +5,17 @@ module.exports = {
     new: newGame,
     create,
     index,
-    show
+    show,
+    delete: deleteGame,
+    update,
+    edit,
 }
 
 function newGame(req, res) {
     res.render('games/new', {title: 'Add Game', errorMsg: ''})
 }
 
-async function index(rew, res) {
+async function index(req, res) {
     const games = await Game.find({})
     res.render('games/index', { title: "All Games", games })
 }
@@ -38,4 +41,24 @@ async function show(req, res) {
         game,
         // ticket,
     })
+}
+
+async function deleteGame(req,res) {
+    await Game.findByIdAndDelete(req.params.id)
+    res.redirect('/games')
+}
+
+async function update(req, res) {
+    await Game.findByIdAndUpdate(req.params.id, req.body)
+    
+    res.redirect('/games')
+}
+
+async function edit(req, res) {
+    const info = await Game.findById(req.params.id)
+    try {
+        res.render('games/update', {title: 'Update', errorMsg: '', info})
+    } catch {
+
+    }
 }

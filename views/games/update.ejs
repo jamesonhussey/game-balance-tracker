@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+<form action="/games/<%= info._id %>?_method=PUT" method="POST">
+  <label>Title: 
+    <input type="text" name="title">
+  </label><br>
+
+  <label>Game type 
+    <select name="gameType">
+      <option value="fps">fps</option>
+      <option value="souls-like">souls-like</option>
+    </select>
+  </label><br>
+
+  <label>Last Patch Date: 
+    <input type="datetime-local" name="lastPatchDate">
+  </label><br>
+  <button type="submit">Update Game</button>
+</form>
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer') %>
