@@ -2,7 +2,7 @@ const Game = require('../models/game')
 
 module.exports = {
     create,
-    index,
+    show,
 }
 
 async function create(req, res) {
@@ -16,7 +16,14 @@ async function create(req, res) {
     res.redirect(`/games/${game._id}`)
 }
 
-async function index(req, res) {
-    const games = await Game.findById(req.params.id)
-    res.render('entities/index', { title: 'This Game', games })
+async function show(req, res) {
+    console.log(req.params.id)
+    const game = await Game.findOne({'entities._id': req.params.id})
+    console.log(game)
+  
+    res.render('entities/show', {
+        title: 'Game Details',
+        game,
+    
+    })
 }

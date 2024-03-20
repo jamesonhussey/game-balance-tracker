@@ -6,5 +6,5 @@ const entitiesCtrl = require('../controllers/entities')
 router.post('/games/:id/entities', entitiesCtrl.create)
 
 
-router.get('/', entitiesCtrl.index)
+router.get('/entities/:id', entitiesCtrl.show)
 module.exports = router
