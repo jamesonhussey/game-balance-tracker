@@ -10,20 +10,16 @@ async function create(req, res) {
     game.entities.push(req.body)
     try {
         await game.save()
-    } catch(err) {
+    } catch (err) {
         console.log(err)
     }
     res.redirect(`/games/${game._id}`)
 }
 
 async function show(req, res) {
-    console.log(req.params.id)
-    const game = await Game.findOne({'entities._id': req.params.id})
-    console.log(game)
-  
+    const game = await Game.findOne({ 'entities._id': req.params.id })
     res.render('entities/show', {
         title: 'Game Details',
         game,
-    
     })
 }

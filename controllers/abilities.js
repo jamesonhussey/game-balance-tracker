@@ -8,8 +8,8 @@ async function create(req, res) {
     try {
         await Game.create(req.body)
         res.redirect('games')
-    } catch(err) {
+    } catch (err) {
         console.log(err)
-        res.render('games/new', {title: err, errorMsg: err.message})
+        res.render('games/new', { title: err, errorMsg: err.message })
     }
 }

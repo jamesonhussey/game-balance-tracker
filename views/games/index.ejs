@@ -2,48 +2,47 @@
     <table>
         <thead>
             <tr>
-                <th>game title</th><th>|</th>
-                <th>game genre</th><th>|</th>
-                <th>last patch date</th><th>|</th>
+                <th>game title</th>
+                <th>|</th>
+                <th>game genre</th>
+                <th>|</th>
+                <th>last patch date</th>
+                <th>|</th>
                 <th>total entries</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Write the line of EJS to iterate over movies using forEach -->
-
-            <!-- How does this know what I'm talking about as far as flights? Where do things in squids get their information from? -->
             <% games.forEach(function(g) { %>
-            <tr>
-                <td>
-                    <%= g.title %>
-                </td>
-                <td>|</td>
-                <td>
-                    <%= g.gameType %>
-                </td>
-                <td>|</td>
-                <td>
-                    <%= g.lastPatchDate.toLocaleDateString() %>
-                </td>
-                <td>|</td>
-                <td>
-                    <%= g.totalEntries %>
-                </td>
-                
-                <td>
-                    <a href="/games/<%= g._id %>">details</a>
-                </td>
-                <td>
-                    <a href="/games/update/<%= g._id %>">update</a>
-                </td>
-                <td>
-                    <form action="/games/<%= g._id %>?_method=DELETE" method="POST">
-                        <button id="delete-button" type="submit">❌</button>
-                    </form>
-                </td>
-            </tr>
-            <!-- Close the forEach using EJS here -->
-            <% }) %>
+                <tr>
+                    <td>
+                        <%= g.title %>
+                    </td>
+                    <td>|</td>
+                    <td>
+                        <%= g.gameType %>
+                    </td>
+                    <td>|</td>
+                    <td>
+                        <%= g.lastPatchDate.toLocaleDateString() %>
+                    </td>
+                    <td>|</td>
+                    <td>
+                        <%= g.totalEntries %>
+                    </td>
+
+                    <td>
+                        <a href="/games/<%= g._id %>">details</a>
+                    </td>
+                    <td>
+                        <a href="/games/update/<%= g._id %>">update</a>
+                    </td>
+                    <td>
+                        <form action="/games/<%= g._id %>?_method=DELETE" method="POST">
+                            <button id="delete-button" type="submit">❌</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
         </tbody>
     </table>
 

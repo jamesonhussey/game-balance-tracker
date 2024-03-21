@@ -72,7 +72,7 @@ const gameSchema = new Schema({
         type: [entitySchema],
     },
 }, {
-    timestamps:true
+    timestamps: true
 })
 
 
