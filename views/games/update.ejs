@@ -1,20 +1,20 @@
 <%- include('../partials/header') %>
-    <form action="/games/<%= info._id %>?_method=PUT" method="POST">
-        <label>Title:
-            <input type="text" name="title">
+    <form id="add-review-form" action="/games/<%= info._id %>?_method=PUT" method="POST">
+        <label>title: 
+            <input id="wtb" type="text" name="title">
         </label><br>
 
-        <label>Game type
-            <select name="gameType">
-                <option value="fps">fps</option>
-                <option value="souls-like">souls-like</option>
+        <label>game type: 
+            <select id="wtb" name="gameType">
+                <option id="wtb" value="fps">fps</option>
+                <option id="wtb" value="souls-like">souls-like</option>
             </select>
         </label><br>
 
-        <label>Last Patch Date:
-            <input type="datetime-local" name="lastPatchDate">
+        <label>last patch date: 
+            <input id="wtb" type="datetime-local" name="lastPatchDate">
         </label><br>
-        <button type="submit">Update Game</button>
+        <button id="wtb" type="submit">update game</button>
     </form>
     <p>
         <%= errorMsg %>

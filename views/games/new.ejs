@@ -1,18 +1,18 @@
 <%- include('../partials/header') %>
-  <form action="/games" method="POST">
-    <label>Title:
+  <form id="add-review-form" action="/games" method="POST">
+    <label>title: 
       <input id="wtb" type="text" name="title">
     </label><br>
 
-    <label>Game type
+    <label>game genre: 
       <select id="wtb" name="gameType">
         <option id="wtb" value="fps">fps</option>
         <option id="wtb" value="souls-like">souls-like</option>
       </select>
     </label><br>
 
-    <label>Last Patch Date:
-      <input id="wtb" type="datetime-local" name="lastPatchDate">
+    <label>last patch date: 
+      <input id="wtb" type="date" name="lastPatchDate">
     </label><br>
     <button id="wtb" type="submit">Add Game</button>
   </form>
