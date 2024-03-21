@@ -19,15 +19,24 @@ Game Details Page <br><br><br>
 - HTML
 - CSS
 - Express
+- MongoDB
+- Mongoose
+- Node.Js
+- Heroku
+- Git
+- Github
+- VS Code
 
 # Getting Started
 
-https://github.com/jamesonhussey/game-balance-tracker
+Github Link: https://github.com/jamesonhussey/game-balance-tracker <br>
+Heroku Link: https://game-balance-tracker-2ce044d21100.herokuapp.com/games
 
 
 # Next Steps
 
 - Details page for entities (use ability schema)
+- Add picture uploads for games, entities, and abilities. I think this should really liven the place up a bit, but can add more interesting styling as well if it still feels like staring at a wall once this is added.
 - Entry count for games
 
  
