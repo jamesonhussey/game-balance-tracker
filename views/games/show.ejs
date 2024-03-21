@@ -1,34 +1,36 @@
 <%- include('../partials/header') %>
 
     <section id="show-page">
-        <div>Title: </div>
+        <div>title: </div>
         <div>
             <%= game.title %>
         </div>
-        <div>Genre: </div>
+        <div>genre: </div>
         <div>
             <%= game.gameType %>
         </div>
-        <div>Total Entries: </div>
+        <div>total Entries: </div>
         <div>
             <%= game.totalEntries %>
         </div>
-        <div>Last Patch Date: </div>
+        <div>last patch date: </div>
         <div>
             <%= game.lastPatchDate.toLocaleDateString() %>
         </div>
     </section>
 
     <br><br>
-    <h2>Entities</h2>
+    <h2>entities</h2>
 
     <% if (game.entities.length) { %>
         <table>
             <thead>
                 <tr>
-                    <th>Name: </th>
-                    <th>Description: </th>
-                    <th>Last Balanced Date: </th>
+                    <th>name </th>
+                    <td>|</td>
+                    <th>description </th>
+                    <td>|</td>
+                    <th>last balanced date </th>
                 </tr>
             </thead>
             <tbody>
@@ -37,14 +39,16 @@
                         <td>
                             <%= e.name %>
                         </td>
+                        <td>|</td>
                         <td>
                             <%= e.entityDescription %>
                         </td>
+                        <td>|</td>
                         <td>
                             <%= e.lastBalancedDate.toLocaleDateString() %>
                         </td>
                         <td>
-                            <a href="/entities/<%= e._id %>">DETAILS</a>
+                            <a href="/entities/<%= e._id %>">details</a>
                         </td>
                     </tr>
                     <% }); %>
@@ -54,17 +58,17 @@
             <h5>No Characters or Items Added Yet</h5>
             <% } %>
                 <br><br>
-                <h3>Add New: </h3>
+                <h3>add new: </h3>
                 <form id="add-review-form" method="POST" action="/games/<%= game._id %>/entities">
                     <label>Name:
-                        <input type="text" name="name">
+                        <input id="wtb" type="text" name="name">
                     </label><br>
-                    <label>Last Balance Update:
-                        <input type="date" name="lastBalancedDate">
+                    <label>last balance update:
+                        <input id="wtb" type="date" name="lastBalancedDate">
                     </label><br>
-                    <label>Description:
-                        <input type="text" name="entityDescription">
+                    <label>description:
+                        <input id="wtb" type="text" name="entityDescription">
                     </label><br>
-                    <button type="submit">Add to List</button>
+                    <button id="wtb" type="submit">add to list</button>
                 </form>
                 <%- include('../partials/footer') %>

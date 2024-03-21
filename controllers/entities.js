@@ -19,7 +19,7 @@ async function create(req, res) {
 async function show(req, res) {
     const game = await Game.findOne({ 'entities._id': req.params.id })
     res.render('entities/show', {
-        title: 'Game Details',
+        title: 'game details',
         game,
     })
 }
