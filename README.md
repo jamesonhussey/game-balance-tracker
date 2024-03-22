@@ -40,5 +40,6 @@ Heroku Link: https://game-balance-tracker-2ce044d21100.herokuapp.com/games
 - Entry count for games
 - Sorting
 - Breakpoints for relationships between entities within a game
+- Add update & delete to other pages
 
  
