@@ -38,5 +38,7 @@ Heroku Link: https://game-balance-tracker-2ce044d21100.herokuapp.com/games
 - Details page for entities (use ability schema)
 - Add picture uploads for games, entities, and abilities. I think this should really liven the place up a bit, but can add more interesting styling as well if it still feels like staring at a wall once this is added.
 - Entry count for games
+- Sorting
+- Breakpoints for relationships between entities within a game
 
  
